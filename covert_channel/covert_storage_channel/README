@@ -1,0 +1,16 @@
+This is a storage covert channel. Sending message by test whether there exists PATH file.
+
+	sender		receiver
+
+PATH	  W		   R
+
+SECRET	  R
+
+So when sender get information from secret, it will create PATH file to represent 1, and delete PATH file to represend 0
+
+The receiver will test whether PATH file exists, if it is, it will get 1, if not, it will get 0
+
+When the sender send "%$" means start message, and "$%" means end of message.
+
+When receiver get "$%", it will create a STOP file, and stop to receive message.
+
