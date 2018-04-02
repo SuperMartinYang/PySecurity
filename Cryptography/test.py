@@ -39,7 +39,7 @@ def pad(message):
     # print padding
 
     # Append the 0's padding
-    message += padding * codecs.decode("00",'hex_codec')
+    message += padding * codecs.decode("00", 'hex_codec')
     message += codecs.decode("%016X" % (length * 8), 'hex_codec')
 
     return message
@@ -142,4 +142,6 @@ while 1:
         print(codecs.encode(hash(codecs.decode(line.strip(), 'hex_codec')), 'hex_codec'))
     else:
         break
+
+
 
