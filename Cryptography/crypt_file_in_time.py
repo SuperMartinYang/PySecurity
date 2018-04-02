@@ -5,6 +5,11 @@ import glob
 from time import *
 import winsound
 
+#################################################################
+# auto start when boot the computer
+# put try.bat to the following directory
+# C:\Users\****\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+##################################################################
 
 def pad(s):
     return s + b'\0' * (AES.block_size - len(s) % AES.block_size)
